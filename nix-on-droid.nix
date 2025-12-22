@@ -40,6 +40,7 @@
     experimental-features = nix-command flakes
   '';
 
+  users.defaultUserShell = pkgs.nushell;
   # Set your time zone
   #time.timeZone = "Europe/Berlin";
 

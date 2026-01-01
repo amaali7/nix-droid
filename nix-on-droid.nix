@@ -40,7 +40,10 @@
     experimental-features = nix-command flakes
   '';
 
-  users.defaultUserShell = pkgs.nushell;
+  environment.sessionVariables = { SHELL = "${pkgs.nushell}/bin/nu"; };
+
+  # users.defaultUserShell = pkgs.nushell;
+  # users.users.nix-on-droid.shell = pkgs.nushell;
   # Set your time zone
   #time.timeZone = "Europe/Berlin";
 
